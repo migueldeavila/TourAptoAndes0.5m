@@ -1,0 +1,2403 @@
+﻿<krpano version="1.20.6" title="Virtual Tour">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+
+	
+	<scene name="scene_Frame_00000_FinalColor" title="Frame_00000_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00000_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00000_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00000_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00000_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00001_FinalColor" title="Frame_00001_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00001_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00001_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00001_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00001_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00002_FinalColor" title="Frame_00002_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00002_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00002_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00002_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00002_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00003_FinalColor" title="Frame_00003_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00003_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00003_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00003_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00003_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00004_FinalColor" title="Frame_00004_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00004_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00004_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00004_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00004_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00005_FinalColor" title="Frame_00005_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00005_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00005_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00005_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00005_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00006_FinalColor" title="Frame_00006_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00006_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00006_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00006_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00006_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00007_FinalColor" title="Frame_00007_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00007_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00007_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00007_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00007_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00008_FinalColor" title="Frame_00008_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00008_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00008_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00008_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00008_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00009_FinalColor" title="Frame_00009_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00009_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00009_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00009_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00009_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00010_FinalColor" title="Frame_00010_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00010_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00010_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00010_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00010_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00011_FinalColor" title="Frame_00011_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00011_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00011_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00011_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00011_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00012_FinalColor" title="Frame_00012_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00012_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00012_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00012_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00012_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00013_FinalColor" title="Frame_00013_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00013_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00013_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00013_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00013_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00014_FinalColor" title="Frame_00014_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00014_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00014_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00014_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00014_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00015_FinalColor" title="Frame_00015_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00015_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00015_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00015_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00015_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00016_FinalColor" title="Frame_00016_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00016_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00016_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00016_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00016_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00017_FinalColor" title="Frame_00017_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00017_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00017_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00017_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00017_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00018_FinalColor" title="Frame_00018_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00018_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00018_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00018_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00018_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00019_FinalColor" title="Frame_00019_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00019_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00019_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00019_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00019_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00020_FinalColor" title="Frame_00020_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00020_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00020_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00020_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00020_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00021_FinalColor" title="Frame_00021_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00021_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00021_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00021_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00021_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00022_FinalColor" title="Frame_00022_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00022_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00022_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00022_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00022_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00023_FinalColor" title="Frame_00023_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00023_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00023_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00023_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00023_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00024_FinalColor" title="Frame_00024_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00024_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00024_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00024_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00024_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00025_FinalColor" title="Frame_00025_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00025_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00025_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00025_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00025_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00026_FinalColor" title="Frame_00026_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00026_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00026_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00026_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00026_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00027_FinalColor" title="Frame_00027_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00027_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00027_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00027_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00027_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00028_FinalColor" title="Frame_00028_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00028_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00028_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00028_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00028_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00029_FinalColor" title="Frame_00029_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00029_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00029_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00029_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00029_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00030_FinalColor" title="Frame_00030_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00030_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00030_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00030_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00030_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00031_FinalColor" title="Frame_00031_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00031_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00031_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00031_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00031_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00032_FinalColor" title="Frame_00032_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00032_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00032_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00032_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00032_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00033_FinalColor" title="Frame_00033_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00033_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00033_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00033_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00033_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00034_FinalColor" title="Frame_00034_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00034_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00034_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00034_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00034_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00035_FinalColor" title="Frame_00035_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00035_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00035_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00035_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00035_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00036_FinalColor" title="Frame_00036_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00036_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00036_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00036_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00036_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00037_FinalColor" title="Frame_00037_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00037_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00037_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00037_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00037_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00038_FinalColor" title="Frame_00038_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00038_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00038_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00038_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00038_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00039_FinalColor" title="Frame_00039_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00039_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00039_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00039_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00039_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00040_FinalColor" title="Frame_00040_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00040_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00040_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00040_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00040_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00041_FinalColor" title="Frame_00041_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00041_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00041_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00041_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00041_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00042_FinalColor" title="Frame_00042_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00042_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00042_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00042_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00042_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00043_FinalColor" title="Frame_00043_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00043_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00043_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00043_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00043_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00044_FinalColor" title="Frame_00044_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00044_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00044_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00044_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00044_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00045_FinalColor" title="Frame_00045_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00045_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00045_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00045_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00045_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00046_FinalColor" title="Frame_00046_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00046_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00046_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00046_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00046_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00047_FinalColor" title="Frame_00047_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00047_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00047_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00047_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00047_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00048_FinalColor" title="Frame_00048_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00048_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00048_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00048_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00048_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00049_FinalColor" title="Frame_00049_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00049_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00049_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00049_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00049_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00050_FinalColor" title="Frame_00050_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00050_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00050_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00050_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00050_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00051_FinalColor" title="Frame_00051_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00051_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00051_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00051_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00051_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00052_FinalColor" title="Frame_00052_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00052_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00052_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00052_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00052_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00053_FinalColor" title="Frame_00053_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00053_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00053_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00053_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00053_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00054_FinalColor" title="Frame_00054_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00054_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00054_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00054_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00054_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00055_FinalColor" title="Frame_00055_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00055_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00055_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00055_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00055_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00056_FinalColor" title="Frame_00056_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00056_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00056_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00056_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00056_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00057_FinalColor" title="Frame_00057_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00057_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00057_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00057_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00057_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00058_FinalColor" title="Frame_00058_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00058_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00058_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00058_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00058_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00059_FinalColor" title="Frame_00059_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00059_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00059_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00059_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00059_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00060_FinalColor" title="Frame_00060_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00060_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00060_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00060_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00060_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00061_FinalColor" title="Frame_00061_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00061_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00061_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00061_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00061_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00062_FinalColor" title="Frame_00062_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00062_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00062_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00062_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00062_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00063_FinalColor" title="Frame_00063_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00063_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00063_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00063_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00063_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00064_FinalColor" title="Frame_00064_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00064_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00064_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00064_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00064_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00065_FinalColor" title="Frame_00065_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00065_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00065_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00065_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00065_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00066_FinalColor" title="Frame_00066_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00066_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00066_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00066_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00066_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00067_FinalColor" title="Frame_00067_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00067_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00067_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00067_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00067_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00068_FinalColor" title="Frame_00068_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00068_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00068_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00068_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00068_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00069_FinalColor" title="Frame_00069_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00069_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00069_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00069_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00069_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00070_FinalColor" title="Frame_00070_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00070_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00070_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00070_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00070_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00071_FinalColor" title="Frame_00071_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00071_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00071_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00071_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00071_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00072_FinalColor" title="Frame_00072_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00072_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00072_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00072_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00072_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00073_FinalColor" title="Frame_00073_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00073_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00073_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00073_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00073_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00074_FinalColor" title="Frame_00074_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00074_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00074_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00074_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00074_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00077_FinalColor" title="Frame_00077_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00077_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00077_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00077_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00077_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00078_FinalColor" title="Frame_00078_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00078_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00078_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00078_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00078_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00079_FinalColor" title="Frame_00079_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00079_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00079_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00079_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00079_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00080_FinalColor" title="Frame_00080_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00080_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00080_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00080_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00080_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00081_FinalColor" title="Frame_00081_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00081_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00081_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00081_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00081_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00082_FinalColor" title="Frame_00082_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00082_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00082_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00082_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00082_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00083_FinalColor" title="Frame_00083_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00083_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00083_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00083_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00083_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00084_FinalColor" title="Frame_00084_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00084_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00084_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00084_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00084_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00085_FinalColor" title="Frame_00085_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00085_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00085_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00085_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00085_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00086_FinalColor" title="Frame_00086_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00086_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00086_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00086_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00086_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00087_FinalColor" title="Frame_00087_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00087_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00087_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00087_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00087_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00088_FinalColor" title="Frame_00088_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00088_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00088_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00088_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00088_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00089_FinalColor" title="Frame_00089_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00089_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00089_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00089_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00089_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00090_FinalColor" title="Frame_00090_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00090_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00090_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00090_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00090_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00091_FinalColor" title="Frame_00091_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00091_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00091_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00091_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00091_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00092_FinalColor" title="Frame_00092_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00092_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00092_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00092_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00092_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00093_FinalColor" title="Frame_00093_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00093_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00093_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00093_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00093_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00094_FinalColor" title="Frame_00094_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00094_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00094_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00094_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00094_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00095_FinalColor" title="Frame_00095_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00095_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00095_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00095_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00095_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00096_FinalColor" title="Frame_00096_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00096_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00096_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00096_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00096_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00097_FinalColor" title="Frame_00097_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00097_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00097_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00097_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00097_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00098_FinalColor" title="Frame_00098_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00098_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00098_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00098_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00098_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00099_FinalColor" title="Frame_00099_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00099_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00099_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00099_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00099_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00100_FinalColor" title="Frame_00100_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00100_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00100_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00100_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00100_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00101_FinalColor" title="Frame_00101_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00101_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00101_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00101_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00101_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00102_FinalColor" title="Frame_00102_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00102_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00102_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00102_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00102_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00105_FinalColor" title="Frame_00105_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00105_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00105_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00105_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00105_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00106_FinalColor" title="Frame_00106_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00106_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00106_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00106_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00106_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00107_FinalColor" title="Frame_00107_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00107_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00107_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00107_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00107_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00108_FinalColor" title="Frame_00108_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00108_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00108_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00108_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00108_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00109_FinalColor" title="Frame_00109_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00109_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00109_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00109_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00109_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00110_FinalColor" title="Frame_00110_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00110_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00110_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00110_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00110_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00111_FinalColor" title="Frame_00111_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00111_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00111_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00111_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00111_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00112_FinalColor" title="Frame_00112_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00112_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00112_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00112_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00112_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00113_FinalColor" title="Frame_00113_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00113_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00113_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00113_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00113_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00114_FinalColor" title="Frame_00114_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00114_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00114_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00114_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00114_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00115_FinalColor" title="Frame_00115_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00115_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00115_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00115_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00115_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00116_FinalColor" title="Frame_00116_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00116_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00116_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00116_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00116_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00117_FinalColor" title="Frame_00117_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00117_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00117_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00117_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00117_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00118_FinalColor" title="Frame_00118_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00118_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00118_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00118_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00118_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00119_FinalColor" title="Frame_00119_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00119_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00119_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00119_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00119_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00120_FinalColor" title="Frame_00120_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00120_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00120_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00120_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00120_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00121_FinalColor" title="Frame_00121_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00121_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00121_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00121_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00121_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00122_FinalColor" title="Frame_00122_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00122_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00122_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00122_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00122_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00123_FinalColor" title="Frame_00123_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00123_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00123_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00123_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00123_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00124_FinalColor" title="Frame_00124_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00124_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00124_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00124_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00124_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00125_FinalColor" title="Frame_00125_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00125_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00125_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00125_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00125_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00126_FinalColor" title="Frame_00126_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00126_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00126_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00126_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00126_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00127_FinalColor" title="Frame_00127_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00127_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00127_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00127_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00127_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00128_FinalColor" title="Frame_00128_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00128_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00128_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00128_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00128_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00129_FinalColor" title="Frame_00129_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00129_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00129_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00129_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00129_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00130_FinalColor" title="Frame_00130_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00130_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00130_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00130_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00130_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00131_FinalColor" title="Frame_00131_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00131_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00131_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00131_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00131_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00132_FinalColor" title="Frame_00132_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00132_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00132_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00132_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00132_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00133_FinalColor" title="Frame_00133_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00133_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00133_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00133_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00133_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00134_FinalColor" title="Frame_00134_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00134_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00134_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00134_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00134_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00135_FinalColor" title="Frame_00135_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00135_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00135_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00135_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00135_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00136_FinalColor" title="Frame_00136_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00136_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00136_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00136_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00136_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00137_FinalColor" title="Frame_00137_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00137_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00137_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00137_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00137_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00138_FinalColor" title="Frame_00138_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00138_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00138_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00138_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00138_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00139_FinalColor" title="Frame_00139_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00139_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00139_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00139_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00139_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00140_FinalColor" title="Frame_00140_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00140_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00140_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00140_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00140_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00142_FinalColor" title="Frame_00142_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00142_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00142_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00142_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00142_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00143_FinalColor" title="Frame_00143_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00143_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00143_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00143_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00143_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00144_FinalColor" title="Frame_00144_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00144_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00144_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00144_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00144_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00145_FinalColor" title="Frame_00145_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00145_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00145_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00145_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00145_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00146_FinalColor" title="Frame_00146_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00146_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00146_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00146_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00146_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00147_FinalColor" title="Frame_00147_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00147_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00147_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00147_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00147_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00148_FinalColor" title="Frame_00148_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00148_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00148_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00148_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00148_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Frame_00149_FinalColor" title="Frame_00149_FinalColor" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/Frame_00149_FinalColor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Frame_00149_FinalColor.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/Frame_00149_FinalColor.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<image stereo="true" stereolabels="1|2" if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/Frame_00149_FinalColor.tiles/vr/pano_%t_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+</krpano>
